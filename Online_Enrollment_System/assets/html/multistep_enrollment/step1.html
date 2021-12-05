@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Enrollment form</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="/assets/css/multistep_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <figure class="multilogo"><img src="/assets/images/logo.png" alt="" width="15%"></figure>
+                    <h2 id="heading">DFCAMCLP-IT Enrollment Form</h2>
+                    <p>Following the CHED mandate to promote quality higher education and to ensure accessibility to
+                        those who may not be able to afford it, DFCAMCLP would like to collect various data and
+                        information, including personal information, from all enrollees. In the processing of these data
+                        and information, DFCAMCLP is committed to ensuring the free flow of information as required
+                        under the Freedom of Information Act (Executive Order No. 2, s. 2016) and to protect and respect
+                        the confidentiality and privacy of these data and information as required under the Data Privacy
+                        Act of 2012 (Republic Act No. 10173). Request for data and information, unless access is denied
+                        when such data and information fall under any of the exceptions enshrined in the Constitution,
+                        existing law or jurisprudence, shall be guided by the Freedom of Information Manual. Only
+                        authorized DFCAMCLP personnel has access to personal information collected and these will be
+                        stored in a database under government policies, rules, regulations, and guidelines. </p>
+                    <p>NOTE: Fill all form field to go to next step. In case you have no answer for a certain question,
+                        just indicate NONE or N/A. Example: Father's Occupation: NONE </p>
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="studinfo"><strong>Student Information</strong></li>
+                            <li id="acad"><strong>Academic Background</strong></li>
+                            <li id="famdress"><strong>Family Address</strong></li>
+                            <li id="faminfo"><strong>Family Information</strong></li>
+                            <li id="confirm"><strong>Finish</strong></li>
+
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Student Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 5</h2>
+                                    </div>
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://c3abu176.caspio.com/dp/4898A0004ee8fe372add4152bc69/emb"></script>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+
+                        </fieldset>
+                        <fieldset>
+
+                        </fieldset>
+                        <fieldset>
+
+                        </fieldset>
+                        <fieldset>
+
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script>$(document).ready(function () {
+
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+
+            setProgressBar(current);
+
+            $(".next").click(function () {
+
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
+
+            $(".previous").click(function () {
+
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+
+                //Remove class active
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                //show the previous fieldset
+                previous_fs.show();
+
+                //hide the current fieldset with style
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
+            });
+
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
+
+            $(".submit").click(function () {
+                return false;
+            })
+
+        });</script>
+</body>
+
+</html>
