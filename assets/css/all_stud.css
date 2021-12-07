@@ -277,7 +277,6 @@ nav .profile-details .admin_name {
 .home-content .sales-boxes {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
 /* left box */
@@ -340,8 +339,7 @@ nav .profile-details .admin_name {
 .home-content .sales-boxes .top-sales {
   width: 100%;
   background: #fff;
-  padding: 20px 30px;
-  margin: 0 20px 20px 0;
+  height: 85vh;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
