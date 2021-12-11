@@ -19,7 +19,7 @@
 #newcb2996A0005999408811734014903b,
 #newcbb639a000fd35fb3bf5954ae88991,
 #newcbf739a000ad7c60a2f7b544e38f4c,
-#newcbb639a0005575e8d55b144e9c9aa1 {
+#newcb1bcaa000decee942b5c9428da610 {
   position: fixed;
   top: -35%;
   opacity: 0;
@@ -599,6 +599,10 @@ nav .profile-details .admin_name {
     display: block;
     font-size: 13px;
   }
+}
+/* ------------Add Course---------- */
+.addcourse {
+  padding: 10px 20px 20px 20px;
 }
 
 /* Responsive Media Query */
