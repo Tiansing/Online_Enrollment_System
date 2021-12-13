@@ -36,8 +36,10 @@ body::-webkit-scrollbar-thumb {
 }
 /* ----remove trade mark------ */
 
-#newcb32E7A000491000c98b8645b597fb,
-#newcb4898A0008be53e6dfbe7459cbc83 {
+#newcb1bcaa000e71f3ec47d364a53b3d4,
+#newcb1BCAA0008be53e6dfbe7459cbc83,
+.cbUpdateButton,
+#newcb1BCAA000491000c98b8645b597fb {
   position: fixed;
   top: -30%;
   opacity: 0;
