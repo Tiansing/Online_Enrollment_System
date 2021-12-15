@@ -322,7 +322,7 @@ body .vertical-centered-box .content {
 }
 .about {
   width: 100%;
-  min-height: 89vh;
+  min-height: 94vh;
   margin: 0;
   padding: 0;
   border: 0;
@@ -342,8 +342,6 @@ body .vertical-centered-box .content {
 }
 .about-text {
   width: 100%;
-
-  margin-bottom: 10%;
   object-position: center;
 }
 .about-text h2 {
@@ -374,7 +372,6 @@ body .vertical-centered-box .content {
   background: var(--primary);
   color: #22577a;
   position: relative;
-  top: 46px;
 }
 /* =========Student Details=========== */
 /* ----------Stud1---------- */
@@ -425,6 +422,33 @@ body .vertical-centered-box .content {
   padding-left: 15px;
   padding-right: 15px;
 }
+/* -------------bg---------- */
+
+.hom {
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(0, 124, 162, 0.9),
+      rgba(0, 124, 162, 0.8)
+    ),
+    url(../../../assets/images/flagbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.back {
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(0, 124, 162, 0.9),
+      rgba(0, 124, 162, 0.8)
+    ),
+    url(../../../assets/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Making Responsive */
 
 @media screen and (max-width: 991px) {
@@ -442,9 +466,6 @@ body .vertical-centered-box .content {
     height: 300px;
   }
 
-  .about {
-    margin-bottom: 20px;
-  }
   /* =========Student Details=========== */
   /* ----------Stud1---------- */
   .stud1 {
