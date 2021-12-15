@@ -334,7 +334,7 @@ nav .profile-details .admin_name {
 
 /* Right box */
 .top-sales {
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 0px 0px 1px;
 }
 .home-content .sales-boxes .top-sales {
