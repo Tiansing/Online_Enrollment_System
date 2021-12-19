@@ -274,7 +274,11 @@ body .vertical-centered-box .content {
   z-index: -1;
 }
 #particles-background {
-  background: #007da3;
+  background: url(https://i.ibb.co/ccHfQb9/1618030-453773171425226-7343711792320834426-o.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
 }
 
 .btn {
